@@ -16,6 +16,17 @@ a {
   text-decoration: none;
 }
 
+.btn {
+  display: inline-block;
+  min-width: 118px;
+  line-height: 50px;
+  padding: 0 16px;
+  text-align: center;
+  border-radius: 24.5px;
+  color: #ffffff;
+  background: #171100;
+}
+
 .main-content {
   width: 1170px;
   max-width: calc(100% - 48px);
@@ -24,8 +35,19 @@ a {
 }
 
 /* ===================Header=============================== */
+.header {
+  background-color: #fffcf4;
+}
+
+.header.fixed {
+  position: sticky;
+  top: -28px;
+}
+
 .header .body {
   display: flex;
+  align-items: center;
+  padding: 36px 0px 8px;
 }
 
 .nav {
@@ -37,12 +59,98 @@ a {
 }
 
 .nav a {
+  position: relative;
   color: #5f5b53;
   font-size: 1.6rem;
   padding: 8px 21px;
 }
 
+.nav li.active a,
 .nav a:hover {
   color: #171100;
   text-shadow: 1px 0 0 currentColor;
+}
+
+.nav li.active a::after {
+  position: absolute;
+  top: 28px;
+  left: 21px;
+  content: "";
+  width: 12px;
+  height: 2px;
+  border-radius: 1px;
+  background: #171100;
+}
+
+.header .btn-sign-up {
+  min-width: 144px;
+}
+
+.header .action {
+  margin-left: 49px;
+}
+
+/* ==================hero====================== */
+.hero {
+  padding: 56px 0px 65px;
+  background-color: #fffcf4;
+}
+
+.hero .body {
+  display: flex;
+}
+
+/* ==================hero left====================== */
+.hero .media-block {
+  position: relative;
+  width: 48%;
+}
+
+.hero .hero-summary {
+  padding: 24px;
+  position: absolute;
+  width: 270px;
+  bottom: 48px;
+  right: 0px;
+  box-shadow: 0px 16px 32px 0px #0000000d;
+  border-radius: 12px;
+  background-color: #ffffff;
+}
+
+.hero .content-block {
+  width: 52%;
+}
+
+.hero-summary .item {
+  display: flex;
+  align-items: center;
+}
+
+.hero-summary .icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff9e8;
+}
+
+.hero-summary .icon2 {
+  background-color: #fcefff;
+}
+
+.hero-summary .icon3 {
+  background-color: #ebeaff;
+}
+
+.hero-summary .item + .item {
+  margin-top: 22px;
+}
+
+/* ==================hero right====================== */
+.hero .content-block {
+  width: 52%;
+  padding-left: 130px;
+  padding-top: 64px;
 }
