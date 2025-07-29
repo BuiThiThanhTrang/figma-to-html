@@ -2,6 +2,11 @@
   box-sizing: border-box;
 }
 
+:root {
+  --font-heading: "Sen", sans-serif;
+  --primary-color: #ffb900;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -22,9 +27,13 @@ a {
   line-height: 50px;
   padding: 0 16px;
   text-align: center;
-  border-radius: 24.5px;
+  border-radius: 9999px;
   color: #ffffff;
   background: #171100;
+}
+
+.btn:hover {
+  opacity: 0.9;
 }
 
 .main-content {
@@ -37,6 +46,7 @@ a {
 /* ===================Header=============================== */
 .header {
   background-color: #fffcf4;
+  z-index: 1;
 }
 
 .header.fixed {
@@ -153,4 +163,80 @@ a {
   width: 52%;
   padding-left: 130px;
   padding-top: 64px;
+}
+
+.hero .heading {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 5.8rem;
+  line-height: 1.17;
+  letter-spacing: -2%;
+  color: #171100;
+}
+
+.hero .desc {
+  margin-top: 22px;
+  font-size: 1.8rem;
+  line-height: 1.7;
+  color: #5f5b53;
+}
+
+.hero .cta-group {
+  margin-top: 38px;
+  display: flex;
+  align-items: center;
+}
+
+.hero .hero-cta {
+  min-width: 180px;
+  line-height: 64px;
+  background-color: var(--primary-color);
+}
+
+.hero .watch-video {
+  margin-left: 28px;
+  border: none;
+  background: none;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.hero .watch-video .icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  box-shadow: 0px 8px 16px 0px #00000012;
+  border-radius: 40px;
+}
+
+.hero .watch-video span {
+  margin-left: 14px;
+  font-weight: 600;
+  font-style: SemiBold;
+  font-size: 1.8rem;
+  line-height: 1.67;
+  letter-spacing: 0%;
+  color: #171100;
+}
+
+.hero .desc-recent {
+  margin-top: 48px;
+}
+
+.hero .stats strong {
+  margin-right: 15px;
+  font-family: var(--font-heading);
+  color: #171100;
+  font-weight: 700;
+  /* font-style: Bold; */
+  font-size: 4.4rem;
+  line-height: 1.22;
+}
+
+.hero .stats strong:nth-child(2) {
+  margin-left: 28px;
 }
